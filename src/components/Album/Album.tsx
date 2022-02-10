@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AWSWithConf, albumBucketName } from '../../awsconfig';
 import { Item, ImageProps } from '../Item';
-import { AlbumProps } from './types';
 import { Wrapper, Title, Grid, Empty } from './styled';
 
 type AlbumComponentProps = {

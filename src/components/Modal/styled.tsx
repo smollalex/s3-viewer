@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div<{ isModalOpen: boolean | null }>`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -12,7 +12,7 @@ export const Wrapper = styled.div<{ isModalOpen: boolean | null }>`
   
   &:before {
     content: '';
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background-color: #0000007a;
@@ -25,6 +25,8 @@ export const Wrapper = styled.div<{ isModalOpen: boolean | null }>`
 export const ModalWrapper = styled.div`
   background-color: #fff;
   z-index: 1;
+  max-width: calc(100vh - 40px);
+  max-height: calc(100vh - 40px);
 `;
 
 export const ModalHeader = styled.div`

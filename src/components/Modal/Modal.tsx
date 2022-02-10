@@ -32,13 +32,13 @@ export const Modal:React.FC<ModalProps> = (props) => {
       <ModalWrapper ref={ref}>
         <ModalHeader>
           Preview
-          <X size={20}  onClick={() => setIsModalOpen(false)} />
+          <X size={20}  onClick={handleClickOutside} />
         </ModalHeader>
         <ModalBody >
           <img src={item?.url} alt={item?.tag} />
         </ModalBody>
         <ModalFooter>
-          <Button onClick={() => setIsModalOpen(false)}>Cancel</Button>
+          <Button onClick={handleClickOutside}>Cancel</Button>
           <Button onClick={saveFile} primary>Download</Button>
         </ModalFooter>
       </ModalWrapper>
